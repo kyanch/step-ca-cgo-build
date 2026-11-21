@@ -173,7 +173,7 @@ jobs:
           set -euo pipefail
 
           VERSION="${SOURCE_TAG#v}"
-          RELEASE_TAG="cgo-${SOURCE_TAG}"
+          RELEASE_TAG="${SOURCE_TAG}"
 
           if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
             echo "Release already exists: $RELEASE_TAG"
